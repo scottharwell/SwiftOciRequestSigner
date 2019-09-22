@@ -41,17 +41,17 @@ public class URLRequestSigner {
     /**
      The tenancy ID that will be used to generate signing requests.
      */
-    var tenancyId: String?
+    private(set) var tenancyId: String?
     
     /**
      The user ID that will be used to generate signing requests.
      */
-    var userId: String?
+    private(set) var userId: String?
     
     /**
      The certificate thumbprint of the user that will be used to generate signing requests.
      */
-    var thumbprint: String?
+    private(set) var thumbprint: String?
     
     /**
      Local path to the private key used for signing requests.
@@ -128,7 +128,7 @@ public class URLRequestSigner {
      
      - Throws: URLRequestSignerError based on the error.
      */
-    private func getUrlRequest(endPoint: String, timeoutInterval: Double = 30) throws -> URLRequest? {
+    public func getUrlRequest(endPoint: String, timeoutInterval: Double = 30) throws -> URLRequest? {
         guard let endPoint = endPoint
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -156,7 +156,7 @@ public class URLRequestSigner {
      
      - Throws: URLRequestSignerError based on the error.
      */
-    private func getUrlRequest(url: URL, timeoutInterval: Double = 30) throws -> URLRequest {
+    public func getUrlRequest(url: URL, timeoutInterval: Double = 30) throws -> URLRequest {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: timeoutInterval)
         
         let rfcDateFormat = DateFormatter()

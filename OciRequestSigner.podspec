@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "OciRequestSigner"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.5"
   spec.summary      = "Signs REST requests for OCI."
 
   # This description is used to generate tags and improve search results.
@@ -69,7 +69,7 @@ Signs REST requests for OCI. This library will take a URLRequest object and add 
 
   #  When using multiple platforms
   spec.ios.deployment_target = "12.4"
-  spec.osx.deployment_target = "10.12"
+  spec.osx.deployment_target = "10.14"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
