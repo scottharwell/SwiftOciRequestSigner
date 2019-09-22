@@ -33,7 +33,7 @@
 		D21663E52337971300C6D2EE /* OciRequestSigner.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OciRequestSigner.podspec; sourceTree = "<group>"; };
 		D27B084E2336C17700A94EE2 /* OCI_Request_Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCI_Request_Signer.swift; sourceTree = "<group>"; };
 		D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64Encoding.swift"; sourceTree = "<group>"; };
-		D2C9F90E23204225004117A0 /* OCI_Request_Signer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCI_Request_Signer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2C9F90E23204225004117A0 /* OciRequestSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OciRequestSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C9F91223204225004117A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCI_Request_Signer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,7 +111,7 @@
 		D2C9F90F23204225004117A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2C9F90E23204225004117A0 /* OCI_Request_Signer.framework */,
+				D2C9F90E23204225004117A0 /* OciRequestSigner.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			);
 			name = "OCI Request Signer";
 			productName = "OCI Request Signer";
-			productReference = D2C9F90E23204225004117A0 /* OCI_Request_Signer.framework */;
+			productReference = D2C9F90E23204225004117A0 /* OciRequestSigner.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -370,6 +370,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5RQT69NLZ4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -384,9 +385,9 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 0.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.harwell.OCI-Request-Signer";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MARKETING_VERSION = 0.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
+				PRODUCT_NAME = OciRequestSigner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -404,6 +405,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5RQT69NLZ4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -418,9 +420,9 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 0.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.harwell.OCI-Request-Signer";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MARKETING_VERSION = 0.0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
+				PRODUCT_NAME = OciRequestSigner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
