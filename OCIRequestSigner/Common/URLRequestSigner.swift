@@ -30,7 +30,7 @@ public class URLRequestSigner {
     /**
      Singleton instance of this class.
     */
-    static let shared = URLRequestSigner();
+    public static let shared = URLRequestSigner();
     
     /**
      The OCI signature version that this class implements.
