@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum ApiVersions: Double, CaseIterable {
+public enum ApiVersions: Double, CaseIterable {
     case one = 1
 }
