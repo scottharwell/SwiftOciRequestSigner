@@ -36,22 +36,22 @@ public class URLRequestSigner {
      The OCI signature version that this class implements.
      As of 9/4/2019, version 1 is the only version
      */
-    private(set) var signatureVersion: ApiVersions = ApiVersions.one
+    public var signatureVersion: ApiVersions = ApiVersions.one
     
     /**
      The tenancy ID that will be used to generate signing requests.
      */
-    private(set) var tenancyId: String?
+    public var tenancyId: String?
     
     /**
      The user ID that will be used to generate signing requests.
      */
-    private(set) var userId: String?
+    public var userId: String?
     
     /**
      The certificate thumbprint of the user that will be used to generate signing requests.
      */
-    private(set) var thumbprint: String?
+    public var thumbprint: String?
     
     /**
      Local path to the private key used for signing requests.
