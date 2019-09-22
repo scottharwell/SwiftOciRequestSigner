@@ -7,13 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D2C9F91323204225004117A0 /* OCI_Request_Signer.h in Headers */ = {isa = PBXBuildFile; fileRef = D2C9F91123204225004117A0 /* OCI_Request_Signer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D21663C92336C52500C6D2EE /* Pods_OCI_Request_Signer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */; };
+		D21663CA2336C52500C6D2EE /* Pods_OCI_Request_Signer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D27B084F2336C17700A94EE2 /* OCI_Request_Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B084E2336C17700A94EE2 /* OCI_Request_Signer.swift */; };
+		D27B08522336C23E00A94EE2 /* String+Base64Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D21663CB2336C52500C6D2EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D21663CA2336C52500C6D2EE /* Pods_OCI_Request_Signer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C5F9C773D8AE9703300A0202 /* Pods-OCI Request Signer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCI Request Signer.debug.xcconfig"; path = "Target Support Files/Pods-OCI Request Signer/Pods-OCI Request Signer.debug.xcconfig"; sourceTree = "<group>"; };
+		C91C1827CFDE46D76574C0E9 /* Pods-OCI Request Signer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCI Request Signer.release.xcconfig"; path = "Target Support Files/Pods-OCI Request Signer/Pods-OCI Request Signer.release.xcconfig"; sourceTree = "<group>"; };
+		D21663E52337971300C6D2EE /* OciRequestSigner.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OciRequestSigner.podspec; sourceTree = "<group>"; };
+		D27B084E2336C17700A94EE2 /* OCI_Request_Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCI_Request_Signer.swift; sourceTree = "<group>"; };
+		D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64Encoding.swift"; sourceTree = "<group>"; };
 		D2C9F90E23204225004117A0 /* OCI_Request_Signer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCI_Request_Signer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2C9F91123204225004117A0 /* OCI_Request_Signer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCI_Request_Signer.h; sourceTree = "<group>"; };
 		D2C9F91223204225004117A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCI_Request_Signer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +43,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21663C92336C52500C6D2EE /* Pods_OCI_Request_Signer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CC422A344D84B665E4CBD25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9C773D8AE9703300A0202 /* Pods-OCI Request Signer.debug.xcconfig */,
+				C91C1827CFDE46D76574C0E9 /* Pods-OCI Request Signer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		90E306B38B762C80837B4D12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D21663E723379D2200C6D2EE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D27B084E2336C17700A94EE2 /* OCI_Request_Signer.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D21663E823379D3200C6D2EE /* ios */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		D21663E923379D3E00C6D2EE /* macos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = macos;
+			sourceTree = "<group>";
+		};
+		D27B08502336C22000A94EE2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D2C9F90423204225004117A0 = {
 			isa = PBXGroup;
 			children = (
-				D2C9F91023204225004117A0 /* OCI Request Signer */,
+				D21663E52337971300C6D2EE /* OciRequestSigner.podspec */,
+				D2C9F91023204225004117A0 /* OCIRequestSigner */,
 				D2C9F90F23204225004117A0 /* Products */,
+				2CC422A344D84B665E4CBD25 /* Pods */,
+				90E306B38B762C80837B4D12 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -43,13 +116,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D2C9F91023204225004117A0 /* OCI Request Signer */ = {
+		D2C9F91023204225004117A0 /* OCIRequestSigner */ = {
 			isa = PBXGroup;
 			children = (
-				D2C9F91123204225004117A0 /* OCI_Request_Signer.h */,
+				D21663E723379D2200C6D2EE /* Common */,
+				D27B08502336C22000A94EE2 /* Extensions */,
+				D21663E823379D3200C6D2EE /* ios */,
+				D21663E923379D3E00C6D2EE /* macos */,
 				D2C9F91223204225004117A0 /* Info.plist */,
 			);
-			path = "OCI Request Signer";
+			path = OCIRequestSigner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +135,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2C9F91323204225004117A0 /* OCI_Request_Signer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,10 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2C9F91623204225004117A0 /* Build configuration list for PBXNativeTarget "OCI Request Signer" */;
 			buildPhases = (
+				92EC5DD4220746397CC2CEE6 /* [CP] Check Pods Manifest.lock */,
 				D2C9F90923204225004117A0 /* Headers */,
 				D2C9F90A23204225004117A0 /* Sources */,
 				D2C9F90B23204225004117A0 /* Frameworks */,
 				D2C9F90C23204225004117A0 /* Resources */,
+				D21663CB2336C52500C6D2EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -95,6 +172,7 @@
 				TargetAttributes = {
 					D2C9F90D23204225004117A0 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -125,11 +203,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		92EC5DD4220746397CC2CEE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCI Request Signer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D2C9F90A23204225004117A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D27B08522336C23E00A94EE2 /* String+Base64Encoding.swift in Sources */,
+				D27B084F2336C17700A94EE2 /* OCI_Request_Signer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +364,9 @@
 		};
 		D2C9F91723204225004117A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5F9C773D8AE9703300A0202 /* Pods-OCI Request Signer.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -276,16 +383,23 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.harwell.OCI-Request-Signer";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D2C9F91823204225004117A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C91C1827CFDE46D76574C0E9 /* Pods-OCI Request Signer.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -302,10 +416,14 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.harwell.OCI-Request-Signer";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
