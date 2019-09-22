@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		D21663C92336C52500C6D2EE /* Pods_OCI_Request_Signer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */; };
 		D21663CA2336C52500C6D2EE /* Pods_OCI_Request_Signer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D27B084F2336C17700A94EE2 /* OCI_Request_Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B084E2336C17700A94EE2 /* OCI_Request_Signer.swift */; };
+		D21663EB23380EB100C6D2EE /* ApiVersions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21663EA23380EB100C6D2EE /* ApiVersions.swift */; };
+		D27B084F2336C17700A94EE2 /* URLRequestSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B084E2336C17700A94EE2 /* URLRequestSigner.swift */; };
 		D27B08522336C23E00A94EE2 /* String+Base64Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +32,8 @@
 		C5F9C773D8AE9703300A0202 /* Pods-OCI Request Signer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCI Request Signer.debug.xcconfig"; path = "Target Support Files/Pods-OCI Request Signer/Pods-OCI Request Signer.debug.xcconfig"; sourceTree = "<group>"; };
 		C91C1827CFDE46D76574C0E9 /* Pods-OCI Request Signer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCI Request Signer.release.xcconfig"; path = "Target Support Files/Pods-OCI Request Signer/Pods-OCI Request Signer.release.xcconfig"; sourceTree = "<group>"; };
 		D21663E52337971300C6D2EE /* OciRequestSigner.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OciRequestSigner.podspec; sourceTree = "<group>"; };
-		D27B084E2336C17700A94EE2 /* OCI_Request_Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCI_Request_Signer.swift; sourceTree = "<group>"; };
+		D21663EA23380EB100C6D2EE /* ApiVersions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiVersions.swift; sourceTree = "<group>"; };
+		D27B084E2336C17700A94EE2 /* URLRequestSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestSigner.swift; sourceTree = "<group>"; };
 		D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64Encoding.swift"; sourceTree = "<group>"; };
 		D2C9F90E23204225004117A0 /* OciRequestSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OciRequestSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2C9F91223204225004117A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,7 +72,8 @@
 		D21663E723379D2200C6D2EE /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D27B084E2336C17700A94EE2 /* OCI_Request_Signer.swift */,
+				D21663EA23380EB100C6D2EE /* ApiVersions.swift */,
+				D27B084E2336C17700A94EE2 /* URLRequestSigner.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -234,7 +237,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D27B08522336C23E00A94EE2 /* String+Base64Encoding.swift in Sources */,
-				D27B084F2336C17700A94EE2 /* OCI_Request_Signer.swift in Sources */,
+				D21663EB23380EB100C6D2EE /* ApiVersions.swift in Sources */,
+				D27B084F2336C17700A94EE2 /* URLRequestSigner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
