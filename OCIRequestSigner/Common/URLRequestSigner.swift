@@ -163,8 +163,8 @@ public class URLRequestSigner {
         rfcDateFormat.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
         let dateStr = rfcDateFormat.string(from: Date())
         
-        request.addValue(dateStr, forHTTPHeaderField: "date")
-        request.addValue(url.host!, forHTTPHeaderField: "host")
+        request.setValue(dateStr, forHTTPHeaderField: "date")
+        request.setValue(url.host!, forHTTPHeaderField: "host")
         
         return request
     }
@@ -178,7 +178,7 @@ public class URLRequestSigner {
         var newRequest = request
         let data = request.httpBody ?? Data()
         let newHeader = data.sha256().base64EncodedString()
-        newRequest.addValue(newHeader, forHTTPHeaderField: "x-content-sha256")
+        newRequest.setValue(newHeader, forHTTPHeaderField: "x-content-sha256")
         
         return newRequest
     }
@@ -203,7 +203,7 @@ public class URLRequestSigner {
             "host"
         ]
         
-        if request.value(forHTTPHeaderField: "x-date") != nil {
+        if newRequest.value(forHTTPHeaderField: "x-date") != nil {
             headersToSign[0] = "x-date"
         }
         
@@ -213,23 +213,23 @@ public class URLRequestSigner {
             headersToSign.append("x-content-sha256")
             
             // Ensure that the request has the content-length header
-            if newRequest.allHTTPHeaderFields?.index(forKey: "content-length") == nil {
-                let data = request.httpBody ?? Data()
-                newRequest.addValue(String(data.count), forHTTPHeaderField: "content-length")
+            if newRequest.value(forHTTPHeaderField: "content-length") == nil {
+                let count = request.httpBody != nil ? String(request.httpBody!.count) : "0"
+                newRequest.setValue(count, forHTTPHeaderField: "content-length")
             }
             
             // Ensure that the request has the content-type header
-            if newRequest.allHTTPHeaderFields?.index(forKey: "content-type") == nil {
-                newRequest.addValue("application/json", forHTTPHeaderField: "content-type")
+            if newRequest.value(forHTTPHeaderField: "content-type") == nil {
+                newRequest.setValue("application/json", forHTTPHeaderField: "content-type")
             }
             
             // Ensure that the request has the x-content-sha256 header
-            if newRequest.allHTTPHeaderFields?.index(forKey: "x-content-sha256") == nil {
+            if newRequest.value(forHTTPHeaderField: "x-content-sha256") == nil {
                 newRequest = self.addXContentHeader(newRequest)
             }
         }
         
-        switch request.httpMethod {
+        switch newRequest.httpMethod {
         case "POST":
             addHeaders()
             break
@@ -248,20 +248,20 @@ public class URLRequestSigner {
         for header in headersToSign {
             switch header {
             case "(request-target)":
-                guard let method = request.httpMethod?.lowercased() else { throw URLRequestSignerError.httpMethodMissing }
-                guard let url = request.url else { throw URLRequestSignerError.httpUrlMissing }
+                guard let method = newRequest.httpMethod?.lowercased() else { throw URLRequestSignerError.httpMethodMissing }
+                guard let url = newRequest.url else { throw URLRequestSignerError.httpUrlMissing }
                 let urlPath = url.path
                 
                 var rtHeader = String(format: "%@ %@", method, urlPath)
                 if let query = url.query {
-                    rtHeader = String(format: "%@?%@", rtHeader, query)
+                    rtHeader = String(format: "%@?%@", rtHeader.lowercased(), query)
                 }
                 
-                signingStr = String(format: "%@%@: %@", signingStr, header, rtHeader)
+                signingStr = String(format: "%@%@: %@", signingStr, header.lowercased(), rtHeader)
                 break
             default:
-                guard let val = request.value(forHTTPHeaderField: header) else { throw URLRequestSignerError.signingHeaderMissing }
-                signingStr = String(format: "%@%@: %@", signingStr, header, val)
+                guard let val = newRequest.value(forHTTPHeaderField: header) else { throw URLRequestSignerError.signingHeaderMissing }
+                signingStr = String(format: "%@%@: %@", signingStr, header.lowercased(), val)
                 break
             }
             
@@ -274,9 +274,9 @@ public class URLRequestSigner {
         let signedData = try myPlaintext.signed(with: k, algorithm: .sha256)
         guard let base64Sig = signedData?.base64String else { throw URLRequestSignerError.signingError }
         
-        let authHeader = String(format: "Signature version=\"%d\",headers=\"%@\",keyId=\"%@\",algorithm=\"rsa-sha256\",signature=\"%@\"", self.signatureVersion.rawValue, headersToSign.joined(separator: " "), apiKeyId, base64Sig)
+        let authHeader = String(format: "Signature version=\"%.0f\",headers=\"%@\",keyId=\"%@\",algorithm=\"rsa-sha256\",signature=\"%@\"", self.signatureVersion.rawValue, headersToSign.joined(separator: " "), apiKeyId, base64Sig)
         
-        newRequest.addValue(authHeader, forHTTPHeaderField: "Authorization")
+        newRequest.setValue(authHeader, forHTTPHeaderField: "Authorization")
         
         return newRequest
     }

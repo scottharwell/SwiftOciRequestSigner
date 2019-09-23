@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2C9F90D23204225004117A0"
-               BuildableName = "OciRequestSigner.framework"
-               BlueprintName = "OCI Request Signer"
-               ReferencedContainer = "container:OCI Request Signer.xcodeproj">
+               BlueprintIdentifier = "3C5BE706BD0AEC86D5D77B4ED6ADF138"
+               BuildableName = "Pods_OciRequestSignerTests.framework"
+               BlueprintName = "Pods-OciRequestSignerTests"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,15 +47,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2C9F90D23204225004117A0"
-            BuildableName = "OciRequestSigner.framework"
-            BlueprintName = "OCI Request Signer"
-            ReferencedContainer = "container:OCI Request Signer.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -3,15 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D21663C92336C52500C6D2EE /* Pods_OCI_Request_Signer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */; };
 		D21663CA2336C52500C6D2EE /* Pods_OCI_Request_Signer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D21663EB23380EB100C6D2EE /* ApiVersions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21663EA23380EB100C6D2EE /* ApiVersions.swift */; };
+		D21663F323381DD900C6D2EE /* OciRequestSignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21663F223381DD900C6D2EE /* OciRequestSignerTests.swift */; };
+		D21663F923381EB000C6D2EE /* pk.pem in Resources */ = {isa = PBXBuildFile; fileRef = D21663F823381EB000C6D2EE /* pk.pem */; };
+		D21663FB23381F6D00C6D2EE /* request.txt in Resources */ = {isa = PBXBuildFile; fileRef = D21663FA23381F6D00C6D2EE /* request.txt */; };
+		D21663FC2338241C00C6D2EE /* OciRequestSigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C9F90E23204225004117A0 /* OciRequestSigner.framework */; };
+		D216640523383B8A00C6D2EE /* valid_post.txt in Resources */ = {isa = PBXBuildFile; fileRef = D216640423383B8A00C6D2EE /* valid_post.txt */; };
+		D216640723383B9E00C6D2EE /* valid_get.txt in Resources */ = {isa = PBXBuildFile; fileRef = D216640623383B9E00C6D2EE /* valid_get.txt */; };
+		D216640A2338EBE700C6D2EE /* valid_empty_post.txt in Resources */ = {isa = PBXBuildFile; fileRef = D21664092338EBE700C6D2EE /* valid_empty_post.txt */; };
 		D27B084F2336C17700A94EE2 /* URLRequestSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B084E2336C17700A94EE2 /* URLRequestSigner.swift */; };
 		D27B08522336C23E00A94EE2 /* String+Base64Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */; };
+		E7BD66061E0E8DBCCEEDCF38 /* Pods_OciRequestSignerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D83EBC249957EBED82C1C7F /* Pods_OciRequestSignerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +37,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D83EBC249957EBED82C1C7F /* Pods_OciRequestSignerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OciRequestSignerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7132397D3ACD0FCC7EFFBC /* Pods-OciRequestSignerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OciRequestSignerTests.debug.xcconfig"; path = "Target Support Files/Pods-OciRequestSignerTests/Pods-OciRequestSignerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		690A84EBC679A3CEFC1D286C /* Pods-OciRequestSignerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OciRequestSignerTests.release.xcconfig"; path = "Target Support Files/Pods-OciRequestSignerTests/Pods-OciRequestSignerTests.release.xcconfig"; sourceTree = "<group>"; };
 		C5F9C773D8AE9703300A0202 /* Pods-OCI Request Signer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCI Request Signer.debug.xcconfig"; path = "Target Support Files/Pods-OCI Request Signer/Pods-OCI Request Signer.debug.xcconfig"; sourceTree = "<group>"; };
 		C91C1827CFDE46D76574C0E9 /* Pods-OCI Request Signer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCI Request Signer.release.xcconfig"; path = "Target Support Files/Pods-OCI Request Signer/Pods-OCI Request Signer.release.xcconfig"; sourceTree = "<group>"; };
 		D21663E52337971300C6D2EE /* OciRequestSigner.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OciRequestSigner.podspec; sourceTree = "<group>"; };
 		D21663EA23380EB100C6D2EE /* ApiVersions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiVersions.swift; sourceTree = "<group>"; };
+		D21663F023381DD900C6D2EE /* OciRequestSignerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OciRequestSignerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21663F223381DD900C6D2EE /* OciRequestSignerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OciRequestSignerTests.swift; sourceTree = "<group>"; };
+		D21663F423381DD900C6D2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D21663F823381EB000C6D2EE /* pk.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pk.pem; sourceTree = "<group>"; };
+		D21663FA23381F6D00C6D2EE /* request.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = request.txt; sourceTree = "<group>"; };
+		D21663FE2338243600C6D2EE /* CryptorRSA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptorRSA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21664002338243900C6D2EE /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D216640423383B8A00C6D2EE /* valid_post.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = valid_post.txt; sourceTree = "<group>"; };
+		D216640623383B9E00C6D2EE /* valid_get.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = valid_get.txt; sourceTree = "<group>"; };
+		D21664092338EBE700C6D2EE /* valid_empty_post.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = valid_empty_post.txt; sourceTree = "<group>"; };
 		D27B084E2336C17700A94EE2 /* URLRequestSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestSigner.swift; sourceTree = "<group>"; };
 		D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64Encoding.swift"; sourceTree = "<group>"; };
 		D2C9F90E23204225004117A0 /* OciRequestSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OciRequestSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +62,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D21663ED23381DD900C6D2EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D21663FC2338241C00C6D2EE /* OciRequestSigner.framework in Frameworks */,
+				E7BD66061E0E8DBCCEEDCF38 /* Pods_OciRequestSignerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2C9F90B23204225004117A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,6 +87,8 @@
 			children = (
 				C5F9C773D8AE9703300A0202 /* Pods-OCI Request Signer.debug.xcconfig */,
 				C91C1827CFDE46D76574C0E9 /* Pods-OCI Request Signer.release.xcconfig */,
+				5C7132397D3ACD0FCC7EFFBC /* Pods-OciRequestSignerTests.debug.xcconfig */,
+				690A84EBC679A3CEFC1D286C /* Pods-OciRequestSignerTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -64,7 +96,10 @@
 		90E306B38B762C80837B4D12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D21664002338243900C6D2EE /* CryptoSwift.framework */,
+				D21663FE2338243600C6D2EE /* CryptorRSA.framework */,
 				F0CB3B1E735726B67CF77C6D /* Pods_OCI_Request_Signer.framework */,
+				1D83EBC249957EBED82C1C7F /* Pods_OciRequestSignerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,6 +127,28 @@
 			path = macos;
 			sourceTree = "<group>";
 		};
+		D21663F123381DD900C6D2EE /* OciRequestSignerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D21664082338E80500C6D2EE /* Test Files */,
+				D21663F223381DD900C6D2EE /* OciRequestSignerTests.swift */,
+				D21663F423381DD900C6D2EE /* Info.plist */,
+			);
+			path = OciRequestSignerTests;
+			sourceTree = "<group>";
+		};
+		D21664082338E80500C6D2EE /* Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				D21663FA23381F6D00C6D2EE /* request.txt */,
+				D21663F823381EB000C6D2EE /* pk.pem */,
+				D216640423383B8A00C6D2EE /* valid_post.txt */,
+				D216640623383B9E00C6D2EE /* valid_get.txt */,
+				D21664092338EBE700C6D2EE /* valid_empty_post.txt */,
+			);
+			path = "Test Files";
+			sourceTree = "<group>";
+		};
 		D27B08502336C22000A94EE2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +162,7 @@
 			children = (
 				D21663E52337971300C6D2EE /* OciRequestSigner.podspec */,
 				D2C9F91023204225004117A0 /* OCIRequestSigner */,
+				D21663F123381DD900C6D2EE /* OciRequestSignerTests */,
 				D2C9F90F23204225004117A0 /* Products */,
 				2CC422A344D84B665E4CBD25 /* Pods */,
 				90E306B38B762C80837B4D12 /* Frameworks */,
@@ -115,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				D2C9F90E23204225004117A0 /* OciRequestSigner.framework */,
+				D21663F023381DD900C6D2EE /* OciRequestSignerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +203,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D21663EF23381DD900C6D2EE /* OciRequestSignerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D21663F523381DD900C6D2EE /* Build configuration list for PBXNativeTarget "OciRequestSignerTests" */;
+			buildPhases = (
+				CFEC2EB51FD340B43BAED558 /* [CP] Check Pods Manifest.lock */,
+				D21663EC23381DD900C6D2EE /* Sources */,
+				D21663ED23381DD900C6D2EE /* Frameworks */,
+				D21663EE23381DD900C6D2EE /* Resources */,
+				96F50C841929B62CBF94AB0E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OciRequestSignerTests;
+			productName = OciRequestSignerTests;
+			productReference = D21663F023381DD900C6D2EE /* OciRequestSignerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D2C9F90D23204225004117A0 /* OCI Request Signer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2C9F91623204225004117A0 /* Build configuration list for PBXNativeTarget "OCI Request Signer" */;
@@ -170,9 +248,13 @@
 		D2C9F90523204225004117A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Scott Harwell";
 				TargetAttributes = {
+					D21663EF23381DD900C6D2EE = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					D2C9F90D23204225004117A0 = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1100;
@@ -192,11 +274,24 @@
 			projectRoot = "";
 			targets = (
 				D2C9F90D23204225004117A0 /* OCI Request Signer */,
+				D21663EF23381DD900C6D2EE /* OciRequestSignerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D21663EE23381DD900C6D2EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D216640523383B8A00C6D2EE /* valid_post.txt in Resources */,
+				D216640A2338EBE700C6D2EE /* valid_empty_post.txt in Resources */,
+				D21663FB23381F6D00C6D2EE /* request.txt in Resources */,
+				D216640723383B9E00C6D2EE /* valid_get.txt in Resources */,
+				D21663F923381EB000C6D2EE /* pk.pem in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2C9F90C23204225004117A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,9 +324,56 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		96F50C841929B62CBF94AB0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OciRequestSignerTests/Pods-OciRequestSignerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OciRequestSignerTests/Pods-OciRequestSignerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OciRequestSignerTests/Pods-OciRequestSignerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFEC2EB51FD340B43BAED558 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OciRequestSignerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D21663EC23381DD900C6D2EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D21663F323381DD900C6D2EE /* OciRequestSignerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2C9F90A23204225004117A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +387,44 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D21663F623381DD900C6D2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C7132397D3ACD0FCC7EFFBC /* Pods-OciRequestSignerTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5RQT69NLZ4;
+				INFOPLIST_FILE = OciRequestSignerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSignerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D21663F723381DD900C6D2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 690A84EBC679A3CEFC1D286C /* Pods-OciRequestSignerTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5RQT69NLZ4;
+				INFOPLIST_FILE = OciRequestSignerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSignerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		D2C9F91423204225004117A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -374,7 +554,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5RQT69NLZ4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -389,12 +569,12 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 0.0.3;
+				MARKETING_VERSION = 0.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
 				PRODUCT_NAME = OciRequestSigner;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,7 +589,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5RQT69NLZ4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -424,12 +604,12 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 0.0.3;
+				MARKETING_VERSION = 0.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
 				PRODUCT_NAME = OciRequestSigner;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,6 +618,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D21663F523381DD900C6D2EE /* Build configuration list for PBXNativeTarget "OciRequestSignerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D21663F623381DD900C6D2EE /* Debug */,
+				D21663F723381DD900C6D2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2C9F90823204225004117A0 /* Build configuration list for PBXProject "OCI Request Signer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
