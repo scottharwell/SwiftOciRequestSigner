@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ Represents the versions of the OCI API that can be used.
+ As of the writing of this library, v1 is the only version.
+ */
 public enum ApiVersions: Double, CaseIterable {
     case one = 1
 }

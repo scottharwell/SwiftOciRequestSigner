@@ -80,7 +80,7 @@ Signs REST requests for OCI. This library will take a URLRequest object and add 
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "git@git.gso.harwell.me:root/oci-rest-signer.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://git.gso.harwell.me/root/oci-rest-signer.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
