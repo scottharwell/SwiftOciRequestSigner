@@ -12,7 +12,6 @@
 		D21663F323381DD900C6D2EE /* OciRequestSignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21663F223381DD900C6D2EE /* OciRequestSignerTests.swift */; };
 		D21663F923381EB000C6D2EE /* pk.pem in Resources */ = {isa = PBXBuildFile; fileRef = D21663F823381EB000C6D2EE /* pk.pem */; };
 		D21663FB23381F6D00C6D2EE /* request.txt in Resources */ = {isa = PBXBuildFile; fileRef = D21663FA23381F6D00C6D2EE /* request.txt */; };
-		D21663FC2338241C00C6D2EE /* OciRequestSigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C9F90E23204225004117A0 /* OciRequestSigner.framework */; };
 		D216640523383B8A00C6D2EE /* valid_post.txt in Resources */ = {isa = PBXBuildFile; fileRef = D216640423383B8A00C6D2EE /* valid_post.txt */; };
 		D216640723383B9E00C6D2EE /* valid_get.txt in Resources */ = {isa = PBXBuildFile; fileRef = D216640623383B9E00C6D2EE /* valid_get.txt */; };
 		D216640A2338EBE700C6D2EE /* valid_empty_post.txt in Resources */ = {isa = PBXBuildFile; fileRef = D21664092338EBE700C6D2EE /* valid_empty_post.txt */; };
@@ -65,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D21663FC2338241C00C6D2EE /* OciRequestSigner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
