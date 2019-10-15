@@ -30,6 +30,6 @@ let package = Package(
         .testTarget(
             name: "OciRequestSignerTests",
             dependencies: ["OciRequestSigner"],
-            path: "OciRequestSignerTests"),
+            path: "SwiftOciRequestSignerTestsMac"),
     ]
 )
