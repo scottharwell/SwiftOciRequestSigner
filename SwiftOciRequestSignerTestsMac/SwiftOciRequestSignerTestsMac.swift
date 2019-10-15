@@ -1,17 +1,16 @@
 //
-//  OciRequestSignerTests.swift
-//  OciRequestSignerTests
+//  SwiftOciRequestSignerTestsMac.swift
+//  SwiftOciRequestSignerTestsMac
 //
-//  Created by Scott Harwell on 9/22/19.
+//  Created by Scott Harwell on 10/15/19.
 //  Copyright © 2019 Scott Harwell. All rights reserved.
 //
 
 import XCTest
 import os
-@testable import OciRequestSigner
+@testable import SwiftOciRequestSigner
 
-class OciRequestSignerTests: XCTestCase {
-    
+class SwiftOciRequestSignerTestsMac: XCTestCase {
     var bundle: Bundle!
     var validGetSig: String!
     var validPostSig: String!
@@ -141,7 +140,7 @@ class OciRequestSignerTests: XCTestCase {
             
             bundle = Bundle(for: type(of: self))
             let path = bundle.path(forResource: "request", ofType: "txt")
-            let data = try String(contentsOfFile: path!).trimmingCharacters(in: .newlines).data(using: .utf8)
+            let data = try? String(contentsOfFile: path!).trimmingCharacters(in: .newlines).data(using: .utf8)
             postRequest.httpBody = data
             
             postRequest = try OciRequestSigner.shared.sign(postRequest)
@@ -164,7 +163,7 @@ class OciRequestSignerTests: XCTestCase {
             let url = URL(string: "https://iaas.us-phoenix-1.oraclecloud.com/20160918/volumeAttachments")
             var postRequest = try OciRequestSigner.shared.getUrlRequest(url: url!)
             postRequest.httpMethod = "POST"
-            postRequest.setValue("Thu, 05 Jan 2014 21:31:40 GMT", forHTTPHeaderField: "date")            
+            postRequest.setValue("Thu, 05 Jan 2014 21:31:40 GMT", forHTTPHeaderField: "date")
             postRequest = try OciRequestSigner.shared.sign(postRequest)
             
             guard let header = postRequest.value(forHTTPHeaderField: "Authorization") else {
