@@ -25,9 +25,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "Swift OCI Request Signer",
-            dependencies: []),
+            dependencies: [],
+            path: "OCIRequestSigner"),
         .testTarget(
-            name: "Swift OCI Request SignerTests",
-            dependencies: ["Swift OCI Request Signer"]),
+            name: "Swift OCI Request Signer Tests",
+            dependencies: ["Swift OCI Request Signer"],
+            path: "OciRequestSignerTests"),
     ]
 )
