@@ -25,7 +25,10 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "OciRequestSigner",
-            dependencies: [],
+            dependencies: [
+                .package(url: "https://github.com/IBM-Swift/BlueRSA.git", from: "1.0.34"),
+                .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.1.2")
+            ],
             path: "OCIRequestSigner"),
         .testTarget(
             name: "OciRequestSignerTests",
