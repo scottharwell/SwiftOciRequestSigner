@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftOCIRequestSigner",
+    name: "OciRequestSigner",
     platforms: [
         .macOS(.v10_14), .iOS(.v12),
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "SwiftOCIRequestSigner",
-            targets: ["SwiftOCIRequestSigner"]),
+            name: "OciRequestSigner",
+            targets: ["OciRequestSigner"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,12 +24,12 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "SwiftOCIRequestSigner",
+            name: "OciRequestSigner",
             dependencies: [],
             path: "OCIRequestSigner"),
         .testTarget(
-            name: "Swift OCI Request Signer Tests",
-            dependencies: ["SwiftOCIRequestSigner"],
+            name: "OciRequestSignerTests",
+            dependencies: ["OciRequestSigner"],
             path: "OciRequestSignerTests"),
     ]
 )

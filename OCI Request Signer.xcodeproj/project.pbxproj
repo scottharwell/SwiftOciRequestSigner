@@ -605,7 +605,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.SwiftOciRequestSigner;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
 				PRODUCT_NAME = OciRequestSigner;
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -639,7 +639,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.SwiftOciRequestSigner;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
 				PRODUCT_NAME = OciRequestSigner;
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
