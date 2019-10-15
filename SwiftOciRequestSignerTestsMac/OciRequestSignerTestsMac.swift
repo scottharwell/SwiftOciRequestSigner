@@ -8,9 +8,9 @@
 
 import XCTest
 import os
-@testable import SwiftOciRequestSigner
+@testable import OciRequestSigner
 
-class SwiftOciRequestSignerTestsMac: XCTestCase {
+class OciRequestSignerTestsMac: XCTestCase {
     var bundle: Bundle!
     var validGetSig: String!
     var validPostSig: String!
