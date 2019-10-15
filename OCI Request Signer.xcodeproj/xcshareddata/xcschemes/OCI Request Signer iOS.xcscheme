@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D2779F702344D1B3003C3BF0"
-               BuildableName = "SwiftOciRequestSigner.framework"
+               BuildableName = "OciRequestSigner.framework"
                BlueprintName = "SwiftOciRequestSigner-iOS"
                ReferencedContainer = "container:OCI Request Signer.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D2779F702344D1B3003C3BF0"
-            BuildableName = "SwiftOciRequestSigner.framework"
+            BuildableName = "OciRequestSigner.framework"
             BlueprintName = "SwiftOciRequestSigner-iOS"
             ReferencedContainer = "container:OCI Request Signer.xcodeproj">
          </BuildableReference>

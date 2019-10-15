@@ -26,7 +26,7 @@ let package = Package(
         .target(
             name: "OciRequestSigner",
             dependencies: [
-                "BlueRSA",
+                "CryptorRSA",
                 "CryptoSwift"
             ],
             path: "OCIRequestSigner"),
