@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D21663CA2336C52500C6D2EE /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D21663EB23380EB100C6D2EE /* ApiVersions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21663EA23380EB100C6D2EE /* ApiVersions.swift */; };
+		D2480AA42356410200272AD1 /* CryptorRSA in Frameworks */ = {isa = PBXBuildFile; productRef = D2480AA32356410200272AD1 /* CryptorRSA */; };
+		D2480AA62356410200272AD1 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2480AA52356410200272AD1 /* CryptoSwift */; };
+		D2480AA82356410A00272AD1 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2480AA72356410A00272AD1 /* CryptoSwift */; };
+		D27B084F2336C17700A94EE2 /* OciRequestSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B084E2336C17700A94EE2 /* OciRequestSigner.swift */; };
+		D27B08522336C23E00A94EE2 /* String+Base64Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */; };
+		D2E0A1C123563FFD0062EE11 /* CryptorRSA in Frameworks */ = {isa = PBXBuildFile; productRef = D2E0A1C023563FFD0062EE11 /* CryptorRSA */; };
+		D2F05644235663DD00A8FB9D /* OciRequestSignerTestsMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F05643235663DD00A8FB9D /* OciRequestSignerTestsMac.swift */; };
+		D2F05646235663DD00A8FB9D /* OciRequestSigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C9F90E23204225004117A0 /* OciRequestSigner.framework */; };
+		D2F0564C2356645E00A8FB9D /* request.txt in Resources */ = {isa = PBXBuildFile; fileRef = D21663FA23381F6D00C6D2EE /* request.txt */; };
+		D2F0564D2356645E00A8FB9D /* pk.pem in Resources */ = {isa = PBXBuildFile; fileRef = D21663F823381EB000C6D2EE /* pk.pem */; };
+		D2F0564E2356645E00A8FB9D /* valid_post.txt in Resources */ = {isa = PBXBuildFile; fileRef = D216640423383B8A00C6D2EE /* valid_post.txt */; };
+		D2F0564F2356645E00A8FB9D /* valid_get.txt in Resources */ = {isa = PBXBuildFile; fileRef = D216640623383B9E00C6D2EE /* valid_get.txt */; };
+		D2F056502356645E00A8FB9D /* valid_empty_post.txt in Resources */ = {isa = PBXBuildFile; fileRef = D21664092338EBE700C6D2EE /* valid_empty_post.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2F05647235663DD00A8FB9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2C9F90523204225004117A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2C9F90D23204225004117A0;
+			remoteInfo = SwiftOciRequestSigner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D21663CB2336C52500C6D2EE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D21663CA2336C52500C6D2EE /* (null) in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D21663EA23380EB100C6D2EE /* ApiVersions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiVersions.swift; sourceTree = "<group>"; };
+		D21663F823381EB000C6D2EE /* pk.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pk.pem; sourceTree = "<group>"; };
+		D21663FA23381F6D00C6D2EE /* request.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = request.txt; sourceTree = "<group>"; };
+		D21663FE2338243600C6D2EE /* CryptorRSA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptorRSA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21664002338243900C6D2EE /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D216640423383B8A00C6D2EE /* valid_post.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = valid_post.txt; sourceTree = "<group>"; };
+		D216640623383B9E00C6D2EE /* valid_get.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = valid_get.txt; sourceTree = "<group>"; };
+		D21664092338EBE700C6D2EE /* valid_empty_post.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = valid_empty_post.txt; sourceTree = "<group>"; };
+		D2480AAC235648EB00272AD1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D2480AAD235648EB00272AD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D2480AAE235649A000272AD1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		D2779F712344D1B3003C3BF0 /* OciRequestSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OciRequestSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27B084E2336C17700A94EE2 /* OciRequestSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OciRequestSigner.swift; sourceTree = "<group>"; };
+		D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64Encoding.swift"; sourceTree = "<group>"; };
+		D2C9F90E23204225004117A0 /* OciRequestSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OciRequestSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2C9F91223204225004117A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F0563B2356609700A8FB9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = OCIRequestSigner/macos/Info.plist; sourceTree = SOURCE_ROOT; };
+		D2F05641235663DD00A8FB9D /* OciRequestSignerTestsMac.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OciRequestSignerTestsMac.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F05643235663DD00A8FB9D /* OciRequestSignerTestsMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OciRequestSignerTestsMac.swift; sourceTree = "<group>"; };
+		D2F05645235663DD00A8FB9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2779F6E2344D1B3003C3BF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E0A1C123563FFD0062EE11 /* CryptorRSA in Frameworks */,
+				D2480AA82356410A00272AD1 /* CryptoSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C9F90B23204225004117A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2480AA42356410200272AD1 /* CryptorRSA in Frameworks */,
+				D2480AA62356410200272AD1 /* CryptoSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F0563E235663DD00A8FB9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F05646235663DD00A8FB9D /* OciRequestSigner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90E306B38B762C80837B4D12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D21664002338243900C6D2EE /* CryptoSwift.framework */,
+				D21663FE2338243600C6D2EE /* CryptorRSA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D21663E723379D2200C6D2EE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D21663EA23380EB100C6D2EE /* ApiVersions.swift */,
+				D27B084E2336C17700A94EE2 /* OciRequestSigner.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D21663E823379D3200C6D2EE /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				D2F0563B2356609700A8FB9D /* Info.plist */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		D21663E923379D3E00C6D2EE /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				D2C9F91223204225004117A0 /* Info.plist */,
+			);
+			path = macos;
+			sourceTree = "<group>";
+		};
+		D21664082338E80500C6D2EE /* Test Files */ = {
+			isa = PBXGroup;
+			children = (
+				D21663FA23381F6D00C6D2EE /* request.txt */,
+				D21663F823381EB000C6D2EE /* pk.pem */,
+				D216640423383B8A00C6D2EE /* valid_post.txt */,
+				D216640623383B9E00C6D2EE /* valid_get.txt */,
+				D21664092338EBE700C6D2EE /* valid_empty_post.txt */,
+			);
+			path = "Test Files";
+			sourceTree = "<group>";
+		};
+		D27B08502336C22000A94EE2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D2C9F90423204225004117A0 = {
+			isa = PBXGroup;
+			children = (
+				D2480AAC235648EB00272AD1 /* LICENSE */,
+				D2480AAD235648EB00272AD1 /* README.md */,
+				D2480AAE235649A000272AD1 /* Package.swift */,
+				D2C9F91023204225004117A0 /* OCIRequestSigner */,
+				D2F05642235663DD00A8FB9D /* SwiftOciRequestSignerTestsMac */,
+				D2C9F90F23204225004117A0 /* Products */,
+				90E306B38B762C80837B4D12 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D2C9F90F23204225004117A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2C9F90E23204225004117A0 /* OciRequestSigner.framework */,
+				D2779F712344D1B3003C3BF0 /* OciRequestSigner.framework */,
+				D2F05641235663DD00A8FB9D /* OciRequestSignerTestsMac.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2C9F91023204225004117A0 /* OCIRequestSigner */ = {
+			isa = PBXGroup;
+			children = (
+				D21663E723379D2200C6D2EE /* Common */,
+				D27B08502336C22000A94EE2 /* Extensions */,
+				D21663E823379D3200C6D2EE /* ios */,
+				D21663E923379D3E00C6D2EE /* macos */,
+			);
+			path = OCIRequestSigner;
+			sourceTree = "<group>";
+		};
+		D2F05642235663DD00A8FB9D /* SwiftOciRequestSignerTestsMac */ = {
+			isa = PBXGroup;
+			children = (
+				D21664082338E80500C6D2EE /* Test Files */,
+				D2F05643235663DD00A8FB9D /* OciRequestSignerTestsMac.swift */,
+				D2F05645235663DD00A8FB9D /* Info.plist */,
+			);
+			path = SwiftOciRequestSignerTestsMac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2779F6C2344D1B3003C3BF0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C9F90923204225004117A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2779F702344D1B3003C3BF0 /* SwiftOciRequestSigner-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2779F762344D1B3003C3BF0 /* Build configuration list for PBXNativeTarget "SwiftOciRequestSigner-iOS" */;
+			buildPhases = (
+				D2779F6C2344D1B3003C3BF0 /* Headers */,
+				D2779F6D2344D1B3003C3BF0 /* Sources */,
+				D2779F6E2344D1B3003C3BF0 /* Frameworks */,
+				D2779F6F2344D1B3003C3BF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftOciRequestSigner-iOS";
+			packageProductDependencies = (
+				D2E0A1C023563FFD0062EE11 /* CryptorRSA */,
+				D2480AA72356410A00272AD1 /* CryptoSwift */,
+			);
+			productName = "OCI Request Signer iOS";
+			productReference = D2779F712344D1B3003C3BF0 /* OciRequestSigner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2C9F90D23204225004117A0 /* SwiftOciRequestSigner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C9F91623204225004117A0 /* Build configuration list for PBXNativeTarget "SwiftOciRequestSigner" */;
+			buildPhases = (
+				D2C9F90923204225004117A0 /* Headers */,
+				D2C9F90A23204225004117A0 /* Sources */,
+				D2C9F90B23204225004117A0 /* Frameworks */,
+				D2C9F90C23204225004117A0 /* Resources */,
+				D21663CB2336C52500C6D2EE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftOciRequestSigner;
+			packageProductDependencies = (
+				D2480AA32356410200272AD1 /* CryptorRSA */,
+				D2480AA52356410200272AD1 /* CryptoSwift */,
+			);
+			productName = "OCI Request Signer";
+			productReference = D2C9F90E23204225004117A0 /* OciRequestSigner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2F05640235663DD00A8FB9D /* OciRequestSignerTestsMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2F05649235663DD00A8FB9D /* Build configuration list for PBXNativeTarget "OciRequestSignerTestsMac" */;
+			buildPhases = (
+				D2F0563D235663DD00A8FB9D /* Sources */,
+				D2F0563E235663DD00A8FB9D /* Frameworks */,
+				D2F0563F235663DD00A8FB9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2F05648235663DD00A8FB9D /* PBXTargetDependency */,
+			);
+			name = OciRequestSignerTestsMac;
+			productName = SwiftOciRequestSignerTestsMac;
+			productReference = D2F05641235663DD00A8FB9D /* OciRequestSignerTestsMac.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2C9F90523204225004117A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Scott Harwell";
+				TargetAttributes = {
+					D2779F702344D1B3003C3BF0 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					D2C9F90D23204225004117A0 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1100;
+					};
+					D2F05640235663DD00A8FB9D = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = D2C9F90823204225004117A0 /* Build configuration list for PBXProject "OCI Request Signer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D2C9F90423204225004117A0;
+			packageReferences = (
+				D2E0A1BF23563FFD0062EE11 /* XCRemoteSwiftPackageReference "BlueRSA" */,
+				D2E0A1C2235640B40062EE11 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
+			productRefGroup = D2C9F90F23204225004117A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2C9F90D23204225004117A0 /* SwiftOciRequestSigner */,
+				D2779F702344D1B3003C3BF0 /* SwiftOciRequestSigner-iOS */,
+				D2F05640235663DD00A8FB9D /* OciRequestSignerTestsMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2779F6F2344D1B3003C3BF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C9F90C23204225004117A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F0563F235663DD00A8FB9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F0564E2356645E00A8FB9D /* valid_post.txt in Resources */,
+				D2F056502356645E00A8FB9D /* valid_empty_post.txt in Resources */,
+				D2F0564C2356645E00A8FB9D /* request.txt in Resources */,
+				D2F0564F2356645E00A8FB9D /* valid_get.txt in Resources */,
+				D2F0564D2356645E00A8FB9D /* pk.pem in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2779F6D2344D1B3003C3BF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2C9F90A23204225004117A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D27B08522336C23E00A94EE2 /* String+Base64Encoding.swift in Sources */,
+				D21663EB23380EB100C6D2EE /* ApiVersions.swift in Sources */,
+				D27B084F2336C17700A94EE2 /* OciRequestSigner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2F0563D235663DD00A8FB9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F05644235663DD00A8FB9D /* OciRequestSignerTestsMac.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2F05648235663DD00A8FB9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2C9F90D23204225004117A0 /* SwiftOciRequestSigner */;
+			targetProxy = D2F05647235663DD00A8FB9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D2779F772344D1B3003C3BF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5RQT69NLZ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/OCIRequestSigner/macos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
+				PRODUCT_NAME = OciRequestSigner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2779F782344D1B3003C3BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5RQT69NLZ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/OCIRequestSigner/macos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
+				PRODUCT_NAME = OciRequestSigner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2C9F91423204225004117A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D2C9F91523204225004117A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D2C9F91723204225004117A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 10;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5RQT69NLZ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = OCIRequestSigner/macos/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
+				PRODUCT_NAME = OciRequestSigner;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2C9F91823204225004117A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 10;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5RQT69NLZ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = OCIRequestSigner/macos/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.OciRequestSigner;
+				PRODUCT_NAME = OciRequestSigner;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D2F0564A235663DD00A8FB9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5RQT69NLZ4;
+				INFOPLIST_FILE = SwiftOciRequestSignerTestsMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.SwiftOciRequestSignerTestsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D2F0564B235663DD00A8FB9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5RQT69NLZ4;
+				INFOPLIST_FILE = SwiftOciRequestSignerTestsMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = me.harwell.SwiftOciRequestSignerTestsMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2779F762344D1B3003C3BF0 /* Build configuration list for PBXNativeTarget "SwiftOciRequestSigner-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2779F772344D1B3003C3BF0 /* Debug */,
+				D2779F782344D1B3003C3BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C9F90823204225004117A0 /* Build configuration list for PBXProject "OCI Request Signer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2C9F91423204225004117A0 /* Debug */,
+				D2C9F91523204225004117A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2C9F91623204225004117A0 /* Build configuration list for PBXNativeTarget "SwiftOciRequestSigner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2C9F91723204225004117A0 /* Debug */,
+				D2C9F91823204225004117A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2F05649235663DD00A8FB9D /* Build configuration list for PBXNativeTarget "OciRequestSignerTestsMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2F0564A235663DD00A8FB9D /* Debug */,
+				D2F0564B235663DD00A8FB9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D2E0A1BF23563FFD0062EE11 /* XCRemoteSwiftPackageReference "BlueRSA" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/IBM-Swift/BlueRSA.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.34;
+			};
+		};
+		D2E0A1C2235640B40062EE11 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2480AA32356410200272AD1 /* CryptorRSA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2E0A1BF23563FFD0062EE11 /* XCRemoteSwiftPackageReference "BlueRSA" */;
+			productName = CryptorRSA;
+		};
+		D2480AA52356410200272AD1 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2E0A1C2235640B40062EE11 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		D2480AA72356410A00272AD1 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2E0A1C2235640B40062EE11 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		D2E0A1C023563FFD0062EE11 /* CryptorRSA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2E0A1BF23563FFD0062EE11 /* XCRemoteSwiftPackageReference "BlueRSA" */;
+			productName = CryptorRSA;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D2C9F90523204225004117A0 /* Project object */;
+}
