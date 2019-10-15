@@ -1,5 +1,5 @@
 //
-//  URLRequestSigner.swift
+//  OciRequestSigner.swift
 //  OCI URLRequest Signer
 //
 //  Created by Scott Harwell on 9/21/19.
@@ -11,7 +11,7 @@ import os
 import CryptorRSA
 import CryptoSwift
 
-public enum URLRequestSignerError: Error {
+public enum OciRequestSignerError: Error {
     case noKeyAtPath,
     paramsNotSet,
     httpBodyMissing,
@@ -23,12 +23,12 @@ public enum URLRequestSignerError: Error {
     signingError
 }
 
-public class URLRequestSigner {
+public class OciRequestSigner {
     
     // MARK: - Properties
     
     /// Singleton instance of this class.
-    public static let shared = URLRequestSigner();
+    public static let shared = OciRequestSigner();
     
     /// The OCI signature version that this class implements. As of 9/4/2019, version 1 is the only version.
     public var signatureVersion: ApiVersions = ApiVersions.one
@@ -60,10 +60,10 @@ public class URLRequestSigner {
     /// - Parameter fileName: The name of the key file without the extension.
     /// - Parameter fileExtention: The extension of the key file.
     /// - Parameter bundle: The bundle that includes the key file. The main bundle is used by default.
-    /// - Throws: URLRequestSignerError when key cannot be found. CryptorRSA error when unable to convert to key.
+    /// - Throws: OciRequestSignerError when key cannot be found. CryptorRSA error when unable to convert to key.
     public func setKey(fileName: String, fileExtention: String, bundle: Bundle = Bundle.main) throws {
         guard let path = bundle.path(forResource: fileName, ofType: fileExtention) else {
-            throw URLRequestSignerError.noKeyAtPath
+            throw OciRequestSignerError.noKeyAtPath
         }
         
         do {
@@ -80,7 +80,7 @@ public class URLRequestSigner {
     
     /// Sets the signing key to a local file accessible to this application.
     /// - Parameter key: The string value of the key to use to sign requests.
-    /// - Throws: URLRequestSignerError when key cannot be found. CryptorRSA error when unable to convert to key.
+    /// - Throws: OciRequestSignerError when key cannot be found. CryptorRSA error when unable to convert to key.
     public func setKey(key: String) throws {
         do {
             let k = try CryptorRSA.createPrivateKey(withPEM: key)
@@ -99,7 +99,7 @@ public class URLRequestSigner {
     /// - Parameter endPoint: The URL string to the OCI REST API endpoint.
     /// - Parameter timeoutInterval: The length of time the request should wait before timeout.  Default is 30 seconds (OCI Functions default).
     /// - Returns: A URLRequest object or nil.
-    /// - Throws: URLRequestSignerError based on the error.
+    /// - Throws: OciRequestSignerError based on the error.
     public func getUrlRequest(endPoint: String, timeoutInterval: Double = 30) throws -> URLRequest? {
         guard let endPoint = endPoint
             .trimmingCharacters(in: .whitespacesAndNewlines)
@@ -108,7 +108,7 @@ public class URLRequestSigner {
                 return nil
         }
         
-        guard let url = URL(string: endPoint) else { throw URLRequestSignerError.httpUrlMissing }
+        guard let url = URL(string: endPoint) else { throw OciRequestSignerError.httpUrlMissing }
         
         do {
             return try self.getUrlRequest(url: url)
@@ -122,7 +122,7 @@ public class URLRequestSigner {
     /// - Parameter url: The URL object to the OCI REST API endpoint.
     /// - Parameter timeoutInterval: The length of time the request should wait before timeout.  Default is 30 seconds (OCI Functions default).
     /// - Returns: A URLRequest object.
-    /// - Throws: URLRequestSignerError based on the error.
+    /// - Throws: OciRequestSignerError based on the error.
     public func getUrlRequest(url: URL, timeoutInterval: Double = 30) throws -> URLRequest {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: timeoutInterval)
         
@@ -150,12 +150,12 @@ public class URLRequestSigner {
     
     /// Performs the signing process on the URL request.
     /// - Parameter request: The URL request to add the Authorization header to.
-    /// - Throws: URLRequestSignerError based on the error.
+    /// - Throws: OciRequestSignerError based on the error.
     public func sign(_ request: URLRequest) throws -> URLRequest {
         var newRequest = request
         
         guard let tenancy = self.tenancyId, let user = self.userId, let thumb = self.thumbprint, let k = self.key else {
-            throw URLRequestSignerError.paramsNotSet
+            throw OciRequestSignerError.paramsNotSet
         }
         
         var headersToSign = [
@@ -209,8 +209,8 @@ public class URLRequestSigner {
         for header in headersToSign {
             switch header {
             case "(request-target)":
-                guard let method = newRequest.httpMethod?.lowercased() else { throw URLRequestSignerError.httpMethodMissing }
-                guard let url = newRequest.url else { throw URLRequestSignerError.httpUrlMissing }
+                guard let method = newRequest.httpMethod?.lowercased() else { throw OciRequestSignerError.httpMethodMissing }
+                guard let url = newRequest.url else { throw OciRequestSignerError.httpUrlMissing }
                 let urlPath = url.path
                 
                 var rtHeader = String(format: "%@ %@", method, urlPath)
@@ -221,7 +221,7 @@ public class URLRequestSigner {
                 signingStr = String(format: "%@%@: %@", signingStr, header.lowercased(), rtHeader)
                 break
             default:
-                guard let val = newRequest.value(forHTTPHeaderField: header) else { throw URLRequestSignerError.signingHeaderMissing }
+                guard let val = newRequest.value(forHTTPHeaderField: header) else { throw OciRequestSignerError.signingHeaderMissing }
                 signingStr = String(format: "%@%@: %@", signingStr, header.lowercased(), val)
                 break
             }
@@ -233,7 +233,7 @@ public class URLRequestSigner {
         
         let myPlaintext = try CryptorRSA.createPlaintext(with: signingStr, using: .utf8)
         let signedData = try myPlaintext.signed(with: k, algorithm: .sha256)
-        guard let base64Sig = signedData?.base64String else { throw URLRequestSignerError.signingError }
+        guard let base64Sig = signedData?.base64String else { throw OciRequestSignerError.signingError }
         
         let authHeader = String(format: "Signature version=\"%.0f\",headers=\"%@\",keyId=\"%@\",algorithm=\"rsa-sha256\",signature=\"%@\"", self.signatureVersion.rawValue, headersToSign.joined(separator: " "), apiKeyId, base64Sig)
         
