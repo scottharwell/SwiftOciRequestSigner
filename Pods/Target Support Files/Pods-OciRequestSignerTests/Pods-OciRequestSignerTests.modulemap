@@ -1,6 +1,0 @@
-framework module Pods_OciRequestSignerTests {
-  umbrella header "Pods-OciRequestSignerTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

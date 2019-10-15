@@ -27,40 +27,25 @@ public class URLRequestSigner {
     
     // MARK: - Properties
     
-    /**
-     Singleton instance of this class.
-    */
+    /// Singleton instance of this class.
     public static let shared = URLRequestSigner();
     
-    /**
-     The OCI signature version that this class implements.
-     As of 9/4/2019, version 1 is the only version
-     */
+    /// The OCI signature version that this class implements. As of 9/4/2019, version 1 is the only version.
     public var signatureVersion: ApiVersions = ApiVersions.one
-    
-    /**
-     The tenancy ID that will be used to generate signing requests.
-     */
+
+    /// The tenancy ID that will be used to generate signing requests.
     public var tenancyId: String?
-    
-    /**
-     The user ID that will be used to generate signing requests.
-     */
+
+    /// The user ID that will be used to generate signing requests.
     public var userId: String?
-    
-    /**
-     The certificate thumbprint of the user that will be used to generate signing requests.
-     */
+
+    /// The certificate thumbprint of the user that will be used to generate signing requests.
     public var thumbprint: String?
-    
-    /**
-     Local path to the private key used for signing requests.
-     */
+
+    /// Local path to the private key used for signing requests.
     private var keyPath: String?
-    
-    /**
-     Instance of the private key that will be used to sign requests.
-     */
+
+    /// Instance of the private key that will be used to sign requests.
     private var key: CryptorRSA.PrivateKey?
     
     // MARK: - Initializers
@@ -71,15 +56,11 @@ public class URLRequestSigner {
     
     // MARK: - Private Key Methods
     
-    /**
-     Sets the signing key to a local file accessible to this application.
-     
-     - Parameter fileName: The name of the key file without the extension.
-     - Parameter fileExtension: The extension of the key file.
-     - Parameter bundle: The bundle that includes the key file. The main bundle is used by default.
-     
-     - Throws: URLRequestSignerError when key cannot be found. CryptorRSA error when unable to convert to key.
-    */
+    /// Sets the signing key to a local file accessible to this application.
+    /// - Parameter fileName: The name of the key file without the extension.
+    /// - Parameter fileExtention: The extension of the key file.
+    /// - Parameter bundle: The bundle that includes the key file. The main bundle is used by default.
+    /// - Throws: URLRequestSignerError when key cannot be found. CryptorRSA error when unable to convert to key.
     public func setKey(fileName: String, fileExtention: String, bundle: Bundle = Bundle.main) throws {
         guard let path = bundle.path(forResource: fileName, ofType: fileExtention) else {
             throw URLRequestSignerError.noKeyAtPath
@@ -97,13 +78,9 @@ public class URLRequestSigner {
         }
     }
     
-    /**
-     Sets the signing key to a local file accessible to this application.
-     
-     - Parameter key: The string value of the key to use to sign requests.
-     
-     - Throws: URLRequestSignerError when key cannot be found. CryptorRSA error when unable to convert to key.
-     */
+    /// Sets the signing key to a local file accessible to this application.
+    /// - Parameter key: The string value of the key to use to sign requests.
+    /// - Throws: URLRequestSignerError when key cannot be found. CryptorRSA error when unable to convert to key.
     public func setKey(key: String) throws {
         do {
             let k = try CryptorRSA.createPrivateKey(withPEM: key)
@@ -118,16 +95,11 @@ public class URLRequestSigner {
     
     // MARK: - URLRequest Methods
     
-    /**
-     Creates a generic URL request with headers expected in OCI REST requests.
-     
-     - Parameter endPoint: The URL string to the OCI REST API endpoint.
-     - Parameter timeoutInterval: The length of time the request should wait before timeout.  Default is 30 seconds (OCI Functions default).
-     
-     - Returns: A URLRequest object or nil.
-     
-     - Throws: URLRequestSignerError based on the error.
-     */
+    /// Creates a generic URL request with headers expected in OCI REST requests.
+    /// - Parameter endPoint: The URL string to the OCI REST API endpoint.
+    /// - Parameter timeoutInterval: The length of time the request should wait before timeout.  Default is 30 seconds (OCI Functions default).
+    /// - Returns: A URLRequest object or nil.
+    /// - Throws: URLRequestSignerError based on the error.
     public func getUrlRequest(endPoint: String, timeoutInterval: Double = 30) throws -> URLRequest? {
         guard let endPoint = endPoint
             .trimmingCharacters(in: .whitespacesAndNewlines)
@@ -146,16 +118,11 @@ public class URLRequestSigner {
         }
     }
     
-    /**
-     Creates a generic URL request with headers expected in OCI REST requests.
-     
-     - Parameter endPoint: The URL object to the OCI REST API endpoint.
-     - Parameter timeoutInterval: The length of time the request should wait before timeout.  Default is 30 seconds (OCI Functions default).
-     
-     - Returns: A URLRequest object.
-     
-     - Throws: URLRequestSignerError based on the error.
-     */
+    /// Creates a generic URL request with headers expected in OCI REST requests.
+    /// - Parameter url: The URL object to the OCI REST API endpoint.
+    /// - Parameter timeoutInterval: The length of time the request should wait before timeout.  Default is 30 seconds (OCI Functions default).
+    /// - Returns: A URLRequest object.
+    /// - Throws: URLRequestSignerError based on the error.
     public func getUrlRequest(url: URL, timeoutInterval: Double = 30) throws -> URLRequest {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: timeoutInterval)
         
@@ -169,11 +136,9 @@ public class URLRequestSigner {
         return request
     }
     
-    /**
-     Adds the x-content-sha256 header based on the http request body.
-     
-     - Parameter request: The URL request to add the header to.
-     */
+    /// Adds the x-content-sha256 header based on the http request body.
+    /// - Parameter request: The URL request to add the header to.
+    /// - Returns: A URLRequest object containing the calculated x-content-sha256 based on the http body.
     public func addXContentHeader(_ request: URLRequest) -> URLRequest {
         var newRequest = request
         let data = request.httpBody ?? Data()
@@ -183,13 +148,9 @@ public class URLRequestSigner {
         return newRequest
     }
     
-    /**
-     Performs the signing process on the URL request.
-     
-     - Parameter request: The URL request to add the Authorization header to.
-     
-     - Throws: URLRequestSignerError based on the error.
-     */
+    /// Performs the signing process on the URL request.
+    /// - Parameter request: The URL request to add the Authorization header to.
+    /// - Throws: URLRequestSignerError based on the error.
     public func sign(_ request: URLRequest) throws -> URLRequest {
         var newRequest = request
         
