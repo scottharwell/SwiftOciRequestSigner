@@ -6,7 +6,9 @@ This swift framework provides an easy-to-use singleton for Swift projects that n
 
 Simply include the framework as a Swift package in Xcode 11 or later.
 
-Assign the required OCI signature propertie as outlined below.
+You can review the test cases for different ways of assigning properties and headers based on your needs.
+
+Assign the required OCI signature properties as outlined below.
 
 * Tenancy OCID
 * User OCID
@@ -14,9 +16,6 @@ Assign the required OCI signature propertie as outlined below.
 * Private Key
 
 ```swift
-
-// Assume 
-
 OciRequestSigner.shared.tenancyId = self.tenancyOCID // assumes the tenancy id is assigned to the current class
 OciRequestSigner.shared.userId = self.userOCID // assumes the user id is assigned to the current class
 OciRequestSigner.shared.thumbprint = self.certFingerprint // assumes the cert fingerprint is assigned to the current class
