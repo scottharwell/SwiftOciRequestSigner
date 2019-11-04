@@ -25,3 +25,10 @@ DerivedData/
 ## Gcc Patch
 /*.gcno
 
+## Swift Package Management
+.swiftpm
+Package.*
+
+## Local Test Files
+SwiftOciRequestSignerTestsMac/Test\ Files/ugbu.pem
+SwiftOciRequestSignerTestsMac/LiveTestsMac.swift

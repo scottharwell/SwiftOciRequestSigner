@@ -12,6 +12,8 @@
 		D2480AA42356410200272AD1 /* CryptorRSA in Frameworks */ = {isa = PBXBuildFile; productRef = D2480AA32356410200272AD1 /* CryptorRSA */; };
 		D2480AA62356410200272AD1 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2480AA52356410200272AD1 /* CryptoSwift */; };
 		D2480AA82356410A00272AD1 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2480AA72356410A00272AD1 /* CryptoSwift */; };
+		D255F5262370830300BE9C4C /* LiveTestsMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = D255F5232370830300BE9C4C /* LiveTestsMac.swift */; };
+		D255F52A23708FBE00BE9C4C /* ugbu.pem in Resources */ = {isa = PBXBuildFile; fileRef = D255F52923708FBE00BE9C4C /* ugbu.pem */; };
 		D27B084F2336C17700A94EE2 /* OciRequestSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B084E2336C17700A94EE2 /* OciRequestSigner.swift */; };
 		D27B08522336C23E00A94EE2 /* String+Base64Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */; };
 		D2E0A1C123563FFD0062EE11 /* CryptorRSA in Frameworks */ = {isa = PBXBuildFile; productRef = D2E0A1C023563FFD0062EE11 /* CryptorRSA */; };
@@ -60,6 +62,8 @@
 		D2480AAC235648EB00272AD1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D2480AAD235648EB00272AD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D2480AAE235649A000272AD1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		D255F5232370830300BE9C4C /* LiveTestsMac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LiveTestsMac.swift; path = SwiftOciRequestSignerTestsMac/LiveTestsMac.swift; sourceTree = SOURCE_ROOT; };
+		D255F52923708FBE00BE9C4C /* ugbu.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ugbu.pem; sourceTree = "<group>"; };
 		D2779F712344D1B3003C3BF0 /* OciRequestSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OciRequestSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27B084E2336C17700A94EE2 /* OciRequestSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OciRequestSigner.swift; sourceTree = "<group>"; };
 		D27B08512336C23E00A94EE2 /* String+Base64Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64Encoding.swift"; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				D21663FA23381F6D00C6D2EE /* request.txt */,
+				D255F52923708FBE00BE9C4C /* ugbu.pem */,
 				D21663F823381EB000C6D2EE /* pk.pem */,
 				D216640423383B8A00C6D2EE /* valid_post.txt */,
 				D216640623383B9E00C6D2EE /* valid_get.txt */,
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				D21664082338E80500C6D2EE /* Test Files */,
+				D255F5232370830300BE9C4C /* LiveTestsMac.swift */,
 				D2F05643235663DD00A8FB9D /* OciRequestSignerTestsMac.swift */,
 				D2F05645235663DD00A8FB9D /* Info.plist */,
 			);
@@ -294,6 +300,7 @@
 				TargetAttributes = {
 					D2779F702344D1B3003C3BF0 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1120;
 					};
 					D2C9F90D23204225004117A0 = {
 						CreatedOnToolsVersion = 10.3;
@@ -351,6 +358,7 @@
 				D2F0564C2356645E00A8FB9D /* request.txt in Resources */,
 				D2F0564F2356645E00A8FB9D /* valid_get.txt in Resources */,
 				D2F0564D2356645E00A8FB9D /* pk.pem in Resources */,
+				D255F52A23708FBE00BE9C4C /* ugbu.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2F05644235663DD00A8FB9D /* OciRequestSignerTestsMac.swift in Sources */,
+				D255F5262370830300BE9C4C /* LiveTestsMac.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +405,7 @@
 		D2779F772344D1B3003C3BF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5RQT69NLZ4;
@@ -416,6 +426,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -424,6 +435,7 @@
 		D2779F782344D1B3003C3BF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5RQT69NLZ4;
