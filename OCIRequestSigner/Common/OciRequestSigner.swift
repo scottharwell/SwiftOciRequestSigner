@@ -126,8 +126,10 @@ public class OciRequestSigner {
     public func getUrlRequest(url: URL, timeoutInterval: Double = 30) throws -> URLRequest {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: timeoutInterval)
         
+        let timezone = TimeZone(abbreviation: "UTC")
         let rfcDateFormat = DateFormatter()
-        rfcDateFormat.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
+        rfcDateFormat.dateFormat = "EEE, dd MMM yyyy HH:mm:ss z"
+        rfcDateFormat.timeZone = timezone
         let dateStr = rfcDateFormat.string(from: Date())
         
         request.setValue(dateStr, forHTTPHeaderField: "date")
